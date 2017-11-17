@@ -1,0 +1,30 @@
+Author: Mohammed Hussein (mo@mailangel.net)
+Version: 1.0
+Date: 17/11/2017
+================================================================================
+
+Log of Changes
+==============
+1. Fix the package name and move to the correct package/folder.
+2. CakeManagerException custom class was created, which extends the unchecked RuntimeException.
+2. POM.xml, Added the jackson-mapper-asl to map pjo to json instead of manual mapping.
+3. Index.jsp, Updated to forward to servlet /cakes for handling root access(/) .
+4. list.jsp was added to show the human presentation of the list of cakes while adding a new Cake, 
+    todo:
+    4.1. jsp files must use jstl to avoid scriptlet .. at all cost!
+    4.2. Form must be separated from the list.
+6. CakeServlet, has been refactored by introducing new reusable methods to avoid duplicated statements!.  
+   todo:
+    6.1. Create a static Utility class to group common functions.
+    6.2. Add more test for different browser requests.
+    6.3. Add more test for different webservice client.
+    6.4. Cach the list of objects to avoid costly db connectivity.
+    6.5. Cater for multi-threading operation 
+7. HibernateUtil, added a close method for session closing.
+8. Test classes are omitted for the purpose of this test.
+9. CakeEntity, was refactored to refelect CakeEntity properties.
+    todo:
+    9.1. Remove Hibernate annotation from the ValueObject class and add the Hibernate mapping (CakeEntity.hbm.xml)
+10. Require Further improvement to the inline comments !
+11. Require Further improvement to exception handling and logging.
+12. Require further code review ...
